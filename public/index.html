@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GAMMEE</title>
+    <title>Game Of Thrones</title>
+    <script src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
-
+    <newGame>
+        <h1>Play GOT!</h1>
+        <div id="game_form">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <label for="status">Status:</label>
+            <select name="status" id="status">
+                <option value="king">King</option>
+                <option value="noble">Noble</option>
+                <option value="commoner">Commoner</option>
+            </select>
+            <label for="type">Status:</label>
+            <select name="type" id="type">
+                <option value="strong">Strong</option>
+                <option value="intelligent">Intelligent</option>
+                <option value="commoner">Commoner</option>
+            </select>
+            <input type="button" value="Start Game" onclick="startGame()">
+        </div>
+    </newGame>
+    <game>
+        <div id="view"></div>
+        <div id="controls"></div>
+        <div id="log"></div>
+    </game>
 </body>
+    <script>
+        init();
+    </script>
 </html>
