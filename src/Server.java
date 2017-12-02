@@ -1,10 +1,9 @@
-import static spark.Spark.get;
-import static spark.Spark.port;
-import static spark.Spark.staticFiles;
+import static spark.Spark.*;
 
 public class Server {
     public static void main(String[] args) {
         port(7777);
+        webSocket("/ws", WSHandler.class);
         staticFiles.externalLocation(System.getProperty("user.dir") + "/public");
         setupRoutes();
     }

@@ -1,0 +1,13 @@
+WebSocket Messages:
+
+_____SERVER TO CLIENT____
+type: "update", effector: "<character name>", effected: "<character name>", action: "<verb>"
+type: "require_input", action: "<verb>", options: [<list of possible actions...>], other_character: "<character name>"
+type: "new_turn", options: [<list of possible actions...>]
+type: "response", action: "<verb>", other_character: "<character name>"
+
+
+____CLIENT TO SERVER____
+type: "response", action: "<verb>", other_character: "<character name>"
+type: "action", action: "<verb>", other_character: "<character name>"
+type: "new_game", name: "<string>", status: "<selected>", type: "<selected>"
